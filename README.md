@@ -26,7 +26,7 @@ MDT Digital Library is a responsive book website that provides a seamless and en
 
 ## Live Demo
 
-Check out the live demo [here](https://MDaniyalTariq.github.io/MDT-Digital-Library).
+Check out the live demo [here](https://mdaniyaltariq.github.io/Digital-Library/).
 
 ## Contact
 For any questions or feedback, please contact [here](m.daniyaltariq9063@gmail.com).
