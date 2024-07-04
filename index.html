@@ -1,92 +1,1141 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
 
-      <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="">
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
 
-      <title>MDT-Digital-Library - Daniyal Tariq</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         
-      </header>
+   <title>MDT-Digital-Library</title>
+</head>
 
-      <!--==================== SEARCH ====================-->
-      <div class="search" id="search-content">
-         
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="container nav">
+         <a href="#home" class="nav__logo">
+            <i class="ri-book-open-line"></i> MDT-Digital-Library
+         </a>
+         <div class="nav__menu">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="#home" class="nav__link active-link">
+                     <i class="ri-home-line"></i>
+                     <span>Home</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="#featured" class="nav__link">
+                     <i class="ri-book-3-line"></i>
+                     <span>Featured</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="#discount" class="nav__link">
+                     <i class="ri-price-tag-3-line"></i>
+                     <span>Discount</span>
+
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="#new" class="nav__link">
+                     <i class="ri-bookmark-line"></i>
+                     <span>New Books</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="#testimonial" class="nav__link">
+                     <i class="ri-message-3-line"></i>
+                     <span>Testimonial</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+
+
+         <div class="nav__actions">
+            <!--Search button-->
+            <i class="ri-search-line" id="search-button"></i>
+
+            <!--login button-->
+            <i class="ri-user-line login-button" id="login-button"></i>
+
+            <!--theme button-->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== SEARCH ====================-->
+   <div class="search" id="search-content">
+      <form action="" class="search__form">
+         <i class="ri-search-line search__icon"></i>
+         <input type="search" placeholder="What would you like to know?" class="search__input">
+      </form>
+      <i class="ri-close-line search__close" id="search-close"></i>
+   </div>
+
+   <!--==================== LOGIN ====================-->
+   <div class="login grid" id="login-content">
+      <form action="" class="login__form grid">
+         <h3 class="login__title">
+            Sign Into Your Account
+         </h3>
+
+         <div class="login__group grid">
+            <div>
+               <label for="login-email" class="login__label">Email</label>
+               <input type="email" placeholder="Type your email address" id="login-email" class="login__input">
+            </div>
+            <div>
+               <label for="login-pass" class="login__label">Password</label>
+               <input type="password" placeholder="Type your password" id="login-pass" class="login__input">
+            </div>
+         </div>
+         <div>
+            <span class="login__signup">
+               You do not have an account? <a href="#" id="signup-button">Sign up</a>
+            </span>
+            <a href="#" class="login__forget">
+               You forgot your password
+            </a>
+            <button type="submit" class="login__button button">Log In</button>
+         </div>
+      </form>
+      <i class="ri-close-line login__close" id="login-close"></i>
+   </div>
+   <!--==================== SIGNUP ====================-->
+   <div class="signup grid" id="signup-content">
+      <form action="" class="signup__form grid">
+         <h3 class="signup__title">
+            Create Your Account
+         </h3>
+
+         <div class="signup__group grid">
+            <div>
+               <label for="signup-name" class="signup__label">Full Name</label>
+               <input type="text" placeholder="Type your full name" id="signup-name" class="signup__input">
+            </div>
+            <div>
+               <label for="signup-email" class="signup__label">Email</label>
+               <input type="email" placeholder="Type your email address" id="signup-email" class="signup__input">
+            </div>
+            <div>
+               <label for="signup-pass" class="signup__label">Password</label>
+               <input type="password" placeholder="Type your password" id="signup-pass" class="signup__input">
+            </div>
+            <div>
+               <label for="signup-confirm-pass" class="signup__label">Confirm Password</label>
+               <input type="password" placeholder="Confirm your password" id="signup-confirm-pass"
+                  class="signup__input">
+            </div>
+         </div>
+         <div>
+            <span class="signup__login">
+               Already have an account? <a href="#">Log In</a>
+            </span>
+            <button type="submit" class="signup__button button">Sign Up</button>
+         </div>
+      </form>
+      <i class="ri-close-line signup__close" id="signup-close"></i>
+   </div>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+         <div class="home__container container grid">
+            <div class="home__data">
+               <h1 class="home__title">
+                  Explore &<br>Learn E-Books
+               </h1>
+               <p class="home__description">
+                  Discover top digital books from your favorite writers, explore hundreds of titles across various
+                  genres, enjoy a 50% discount, and much more.
+               </p>
+               <a href="" class="button">Browse Now</a>
+            </div>
+            <div class="home__images">
+               <div class="home__swiper swiper">
+                  <div class="swiper-wrapper">
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/wepick-books/wepik-we-are-young-wattpad-book-cover-20240702100223skBt.png"
+                           alt="image" class="home__img">
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <img
+                           src="assets/img/wepick-books/wepik-the-blade-in-the-sea-wattpad-book-cover-20240702100031ycaY.png"
+                           alt="image" class="home__img">
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/wepick-books/wepik-the-bike-guy-wattpad-book-cover-20240702100429vaJD.png"
+                           alt="image" class="home__img">
+                     </article>
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/wepick-books/wepik-sun-of-pride-wattpad-book-cover-20240702100115IiNI.png"
+                           alt="image" class="home__img">
+                     </article>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== SERVICES ====================-->
+      <section class="services section">
+         <div class="services__container container grid">
+            <article class="services__card">
+               <i class="ri-truck-line"></i>
+               <h3 class="services__title">Free Shipping</h3>
+               <p class="services__description">Order More Than $100</p>
+            </article>
+            <article class="services__card">
+               <i class="ri-shield-check-line"></i>
+               <h3 class="services__title">Secure Payment</h3>
+               <p class="services__description">100% Secure Payment</p>
+            </article>
+            <article class="services__card">
+               <i class="ri-customer-service-2-line"></i>
+               <h3 class="services__title">24/7 Support</h3>
+               <p class="services__description">Call us anytime</p>
+            </article>
+            <article class="services__card">
+               <i class="ri-recycle-line"></i>
+               <h3 class="services__title">Easy Returns</h3>
+               <p class="services__description">30-Day Return Policy</p>
+            </article>
+            <article class="services__card">
+               <i class="ri-money-dollar-circle-line"></i>
+               <h3 class="services__title">Money-Back Guarantee</h3>
+               <p class="services__description">100% Money-Back Guarantee</p>
+            </article>
+            <article class="services__card">
+               <i class="ri-gift-line"></i>
+               <h3 class="services__title">Exclusive Offers</h3>
+               <p class="services__description">Special Discounts & Offers</p>
+            </article>
+         </div>
+      </section>
+
+
+      <!--==================== FEATURED ====================-->
+      <section class="featured section" id="featured">
+         <h2 class="section__title">Featured Books</h2>
+         <div class="featured__container container">
+            <div class="featured__swiper swiper">
+               <div class="swiper-wrapper">
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-simple-dark-horror-book-cover-20240702100519slhe.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">Horror Story</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-abstract-waves-coffee-shop-classic-flavour-poster-20240702100524hJLj.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">Waves Coffee</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-already-home-wattpad-book-cover-202407021000007idH.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">Already Home</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-atomic-love-wattpad-book-cover-202407021001008Lw8.png"
+                        alt="image" class="featured__img" id="corrected-img">
+
+
+                     <h2 class="featured__title">Atomic Love</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-daylight-wattpad-book-cover-20240702095743aPPb.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">DAYLIGHT</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-from-the-stars-wattpad-book-cover-20240702095842eBbv.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">From The Stars</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-good-on-paper-wattpad-book-cover-20240702095939nDQw.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">Looks Good On Paper</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-good-times-wattpad-book-cover-20240702100204covf.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">Good Times</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-inferno-hearts-wattpad-book-cover-20240702095856FNms.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">Inferno Hearts</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+                  <article class="featured__Card swiper-slide">
+                     <img
+                        src="/MDT-Digital-Library/assets/img/wepick-books/wepik-it-started-with-a-coffee-wattpad-book-cover-202407020959226gGA.png"
+                        alt="image" class="featured__img">
+
+
+                     <h2 class="featured__title">It Started With The Coffee</h2>
+
+                     <div class="featured__prices">
+                        <span class="featured__discount">$11.99</span>
+                        <span class="featured__price">$19.99</span>
+                     </div>
+                     <button class="button">Add To Cart</button>
+
+                     <div class="featured__actions">
+                        <button><i class="ri-search-line"></i></button>
+                        <button><i class="ri-heart-3-line"></i></button>
+                        <button><i class="ri-eye-line"></i></button>
+                     </div>
+                  </article>
+               </div>
+               <div class="swiper-button-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+               </div>
+               <div class="swiper-button-next">
+                  <i class="ri-arrow-right-s-line"></i>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== DISCOUNT ====================-->
+      <section class="discount section" id="discount">
+         <div class="discount__container container grid">
+            <div class="discount__data">
+               <h2 class="discount__title section__title">
+                  Up To 50% Discount
+               </h2>
+               <p class="discount__description">
+                  Take advantage of the discount days we
+                  have for you, buy books from your favorite
+                  writers, the more you buy, the more
+                  discounts we have for you.
+               </p>
+               <a href="" class="button">Get Your Book Now</a>
+            </div>
+            <div class="discount__images">
+               <img src="assets/img/wepick-books/wepik-we-are-young-wattpad-book-cover-20240702100223skBt.png"
+                  alt="image" class="discount__img-1">
+               <img src="assets/img/wepick-books/wepik-the-blade-in-the-sea-wattpad-book-cover-20240702100031ycaY.png"
+                  alt="image" class="discount__img-2">
+            </div>
+         </div>
+      </section>
+
+      <!--==================== NEW BOOKS ====================-->
+      <section class="new section" id="new">
+         <h2 class="section__title">
+            New Stock
+         </h2>
+
+         <div class="new__container container">
+            <div class="new__swiper swiper">
+               <div class="swiper-wrapper">
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-atomic-love-wattpad-book-cover-202407021001008Lw8.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Atomic Love
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$20.99</span>
+                           <span class="new__price">$16.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-daylight-wattpad-book-cover-20240702095743aPPb.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Daylight
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$10.99</span>
+                           <span class="new__price">$5.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-from-the-stars-wattpad-book-cover-20240702095842eBbv.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           From The Stars
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$9.99</span>
+                           <span class="new__price">$8.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-good-on-paper-wattpad-book-cover-20240702095939nDQw.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Good On Paper
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$25.99</span>
+                           <span class="new__price">$20.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-good-times-wattpad-book-cover-20240702100204covf.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Good Times
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$50.99</span>
+                           <span class="new__price">$30.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-inferno-hearts-wattpad-book-cover-20240702095856FNms.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Inferno Hearts
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$5.99</span>
+                           <span class="new__price">$4.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img
+                        src="assets/img/wepick-books/wepik-it-started-with-a-coffee-wattpad-book-cover-202407020959226gGA.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           It started With A Coffee
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$7.99</span>
+                           <span class="new__price">$14.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-of-love-and-lies-wattpad-book-cover-20240702100147rKvk.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Love And Lies
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$35.99</span>
+                           <span class="new__price">$30.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="new__swiper swiper">
+               <div class="swiper-wrapper">
+
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-daylight-wattpad-book-cover-20240702095743aPPb.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Daylight
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$10.99</span>
+                           <span class="new__price">$5.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-from-the-stars-wattpad-book-cover-20240702095842eBbv.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           From The Stars
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$9.99</span>
+                           <span class="new__price">$8.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-good-on-paper-wattpad-book-cover-20240702095939nDQw.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Good On Paper
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$25.99</span>
+                           <span class="new__price">$20.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-good-times-wattpad-book-cover-20240702100204covf.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Good Times
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$50.99</span>
+                           <span class="new__price">$30.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-inferno-hearts-wattpad-book-cover-20240702095856FNms.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Inferno Hearts
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$5.99</span>
+                           <span class="new__price">$4.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img
+                        src="assets/img/wepick-books/wepik-it-started-with-a-coffee-wattpad-book-cover-202407020959226gGA.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           It started With A Coffee
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$7.99</span>
+                           <span class="new__price">$14.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-of-love-and-lies-wattpad-book-cover-20240702100147rKvk.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Love And Lies
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$35.99</span>
+                           <span class="new__price">$30.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-already-home-wattpad-book-cover-202407021000007idH.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Already Home
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$14.99</span>
+                           <span class="new__price">$7.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img
+                        src="assets/img/wepick-books/wepik-abstract-waves-coffee-shop-classic-flavour-poster-20240702100524hJLj.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Abstract Waves Coffee
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$7.99</span>
+                           <span class="new__price">$14.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-already-home-wattpad-book-cover-202407021000007idH.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Already Home
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$14.99</span>
+                           <span class="new__price">$7.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img
+                        src="assets/img/wepick-books/wepik-abstract-waves-coffee-shop-classic-flavour-poster-20240702100524hJLj.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Abstract Waves Coffee
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$7.99</span>
+                           <span class="new__price">$14.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="new__card swiper-slide">
+                     <img src="assets/img/wepick-books/wepik-atomic-love-wattpad-book-cover-202407021001008Lw8.png"
+                        alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">
+                           Atomic Love
+                        </h2>
+                        <div class="new__prices">
+                           <span class="new__discount">$20.99</span>
+                           <span class="new__price">$16.99</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-line"></i>
+                           <i class="ri-star-line"></i>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+      <!--==================== JOIN ====================-->
+      <section class="join section">
+         <div class="join__container">
+
+            <div class="join__data container grid">
+               <h2 class="join__title section__title">
+                  Subscribe To Receive <br>
+                  The Latest Updates
+               </h2>
+               <form action="" class="join__form">
+                  <input type="email" placeholder="Enter your email" class="join__input">
+                  <button type="submit" class="join__button button">Subscribe Now</button>
+               </form>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== TESTIMONIAL ====================-->
+      <section class="testimonial section" id="testimonial">
+         <h2 class="section__title">Customer Testimonials</h2>
+         <div class="testomonial__container container">
+            <div class="testimonial__swiper swiper">
+               <div class="swiper-wrapper">
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-1.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        Aisha
+                     </h2>
+                     <p class="testimonial__description">
+                        The best website to buy books, the purchase
+                        is very easy to make and has great discounts.
+                     </p>
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+                  </article>
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-2.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        Omar
+                     </h2>
+                     <p class="testimonial__description">
+                        This website offers an effortless book-buying experience with fantastic deals and discounts.
+                     </p>
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+                  </article>
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-3.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        Fatima
+                     </h2>
+                     <p class="testimonial__description">
+                        An excellent platform for book purchases; the process is straightforward, and the discounts are impressive.
+                     </p>
+
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+                  </article>
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-4.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        Ali
+                     </h2>
+                     <p class="testimonial__description">
+                        This site is fantastic for book shopping! The buying process is smooth, and there are amazing
+                        discounts available.
+                     </p>
+
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                     </div>
+                  </article>
+               </div>
+            </div>
+
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <div>
+            <a href="" class="footer__logo">
+               <i class="ri-book-open-line"></i> MDT-Digital-Library
+            </a>
+            <p class="footer__description">
+               Find and explore the best 
+               eBooks from all your 
+               favorite writers.
+            </p>
+         </div>
+         <div class="footer__data grid">
+            <div>
+               <h3 class="footer__title">
+                  About
+               </h3>
+               <ul class="footer__links">
+                  <li class="footer__link">
+                     Awards
+                  </li>
+                  <li class="footer__link">
+                     FAQs
+                  </li>
+                  <li class="footer__link">
+                     Privacy policy
+                  </li>
+                  <li class="footer__link">
+                     Terms of services
+                  </li>
+               </ul>
+            </div>
+            <div>
+               <h3 class="footer__title">
+                  Company
+               </h3>
+               <ul class="footer__links">
+                  <li class="footer__link">
+                     Blogs
+                  </li>
+                  <li class="footer__link">
+                     Community
+                  </li>
+                  <li class="footer__link">
+                     Our team
+                  </li>
+                  <li class="footer__link">
+                     Help center
+                  </li>
+               </ul>
+            </div>
+            <div>
+               <h3 class="footer__title">
+                  Contact
+               </h3>
+               <ul class="footer__links">
+                  <li class="footer__link">
+                     <address class="footer__info">
+                        DHA Phase 4 <br>
+                        Lahore 54000, Pakistan
+
+                     </address>
+                  </li>
+                  <li class="footer__link">
+                     <address class="footer__info">
+                        0301-9659-063
+
+                     </address>
+                  </li>
+               </ul>
+            </div>
+            <div id="corrected-social">
+               <h3 class="footer__title">
+                  Social
+               </h3>
+               <div class="footer__social">
+                  <a href="https://api.whatsapp.com/send?phone=+923019659063&text=Hello, more information!"
+                     target="_blank" class="footer__social-link">
+                     <i class="ri-whatsapp-line"></i>
+                  </a>
+
+
+                  <a href="https://m.me/DaniyalTariq" target="_blank" class="footer__social-link">
+                     <i class="ri-messenger-line"></i>
+                  </a>
+
+                  <a href="mailto:m.daniyaltariqwd@gmail.com?subject=Inquiry&body=Hello, I have a question for you..." class="footer__social-link">
+                     <i class="ri-mail-line"></i>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/daniyal-tariq-584265295/" target="_blank" class="footer__social-link">
+                     <i class="ri-linkedin-line"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/iamdaniyal___tariq" target="_blank" class="footer__social-link">
+                     <i class="ri-instagram-line"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
       </div>
+      <span class="footer__copy">
+         &#169; All Rights Reserved By  <a href="https://www.linkedin.com/in/daniyal-tariq-584265295/" target="_blank" > M Daniyal Tariq</a>
+      </span>
+   </footer>
 
-      <!--==================== LOGIN ====================-->
-      <div class="login grid" id="login-content">
-         
-      </div>
+   <!--========== SCROLL UP ==========-->
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            
-         </section>
+   <a href="" class="scroll__up" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+   
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="./assets/js/scrollreveal.min.js"></script>
 
-         <!--==================== SERVICES ====================-->
-         <section class="services section">
-            
-         </section>
+   <!--=============== SWIPER JS ===============-->
+   <script src="./assets/js/swiper-bundle.min.js"></script>
 
-         <!--==================== FEATURED ====================-->
-         <section class="featured section" id="featured">
-            
-         </section>
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
 
-         <!--==================== DISCOUNT ====================-->
-         <section class="discount section" id="discount">
-            
-         </section>
-
-         <!--==================== NEW BOOKS ====================-->
-         <section class="new section" id="new">
-            
-         </section>
-
-         <!--==================== JOIN ====================-->
-         <section class="join section">
-            
-         </section>
-
-         <!--==================== TESTIMONIAL ====================-->
-         <section class="testimonial section" id="testimonial">
-            
-         </section>
-      </main>
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         
-      </footer>
-
-      <!--========== SCROLL UP ==========-->
-      
-
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src=""></script>
-
-      <!--=============== SWIPER JS ===============-->
-      <script src=""></script>
-
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
 </html>

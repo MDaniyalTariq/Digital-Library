@@ -10,7 +10,8 @@ Responsive Book Website Design Using HTML, CSS & JavaScript
 - Support for both dark and light themes.
 - Mobile-first design approach, then adapted for desktop.
 - Fully responsive and visually appealing across all devices.
-
+- Utilizes Swiper.js for interactive sliders.
+- Implements ScrollReveal for stunning scroll animations.
 ## Overview
 
 MDT Digital Library is a responsive book website that provides a seamless and engaging user experience. The website is designed to be visually appealing and functionally robust, ensuring compatibility across various devices.
@@ -20,6 +21,9 @@ MDT Digital Library is a responsive book website that provides a seamless and en
 - **HTML**
 - **CSS**
 - **JavaScript**
+- **Swiper.js**
+- **ScrollReveal.js**
+
 ## Live Demo
 
 Check out the live demo [here](https://MDaniyalTariq.github.io/MDT-Digital-Library).
