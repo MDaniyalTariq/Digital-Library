@@ -37,9 +37,9 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MDaniyalTariq/MDT-Digital-Library.git
+   git clone https://github.com/MDaniyalTariq/Digital-Library.git
 
 2. Navigate to the project directory:
    ```bash
-   cd MDT-Digital-Library
+   cd Digital-Library
 3. Open index.html in your browser to view the website.
